@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mortgagecalculatorandroid.Calculator" >
+
+    <EditText
+        android:id="@+id/grossInc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/monDebt"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal" />
+
+    <EditText
+        android:id="@+id/monDebt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intRate"
+        android:layout_below="@+id/grossInc"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/intRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dPmt"
+        android:layout_below="@+id/monDebt"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/dPmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ttlAfrdblMrg"
+        android:layout_below="@+id/intRate"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Gross Income"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/ttlAfrdblMrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:clickable="false" 
+        android:cursorVisible="false" 
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/trmSpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ttlAfrdblMrg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grossInc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Total Monthly Debt"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ttlAfrdblMrg"
+        android:layout_centerHorizontal="true"
+        android:text="Total Affordable Mortgage"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dPmt"
+        android:layout_centerHorizontal="true"
+        android:text="Down Payment"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monDebt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="Interest Rate"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/trmSpin"
+        android:layout_centerHorizontal="true"
+        android:text="Term"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
